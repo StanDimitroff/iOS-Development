@@ -10,7 +10,7 @@ import UIKit
 class RoundButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        layer.cornerRadius = 15
+        layer.cornerRadius = 16
         layer.borderWidth = 2
     }
 }
