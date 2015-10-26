@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StartButton: RoundButton {
+class StartStopButton: RoundButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         layer.borderColor = UIColor.greenColor().CGColor

@@ -24,13 +24,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-GN-pcK">
-                                <rect key="frame" x="20" y="138" width="560" height="72"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qRI-be-IPa">
                                 <rect key="frame" x="0.0" y="74" width="600" height="2"/>
                                 <animations/>
@@ -38,7 +31,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hD3-t9-2BT">
                                 <rect key="frame" x="253" y="282" width="95" height="36"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf1-oa-h75" customClass="StartButton" customModule="Stopwatch" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf1-oa-h75" customClass="StartStopButton" customModule="Stopwatch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="36"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
@@ -47,41 +40,96 @@
                                             <action selector="startStopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yh8-79-O8l"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz1-A7-aQW" customClass="LapresetButton" customModule="Stopwatch" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz1-A7-aQW" customClass="LapResetButton" customModule="Stopwatch" customModuleProvider="target">
                                         <rect key="frame" x="62" y="0.0" width="33" height="36"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                         <state key="normal" title="Lap"/>
                                         <connections>
-                                            <action selector="lapButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uiv-ME-OBz"/>
+                                            <action selector="lapButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Obc-uP-mZ9"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-GN-pcK">
+                                <rect key="frame" x="20" y="138" width="560" height="72"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P0l-5B-PNt">
+                                <rect key="frame" x="20" y="367" width="560" height="220"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="xHD-ek-WQf"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lapTime" textLabel="M2a-33-LIX" detailTextLabel="fpY-3O-yvd" style="IBUITableViewCellStyleValue1" id="VmV-WG-61C">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VmV-WG-61C" id="0vx-55-FMP">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M2a-33-LIX">
+                                                    <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fpY-3O-yvd">
+                                                    <rect key="frame" x="503" y="12" width="42" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pKc-bU-gs1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2os-ZP-edY"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="P0l-5B-PNt" secondAttribute="leading" id="0Fy-1d-06O"/>
                             <constraint firstItem="hD3-t9-2BT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5CZ-QP-80M"/>
                             <constraint firstItem="xUK-du-ky4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5s5-7C-IKo"/>
+                            <constraint firstItem="P0l-5B-PNt" firstAttribute="top" secondItem="hD3-t9-2BT" secondAttribute="bottom" constant="49" id="7QV-hO-vYK"/>
                             <constraint firstAttribute="leadingMargin" secondItem="hRh-GN-pcK" secondAttribute="leading" id="MqY-na-huq"/>
                             <constraint firstItem="hD3-t9-2BT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VT6-0h-sHg"/>
                             <constraint firstItem="qRI-be-IPa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="W8a-zn-GcQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P0l-5B-PNt" secondAttribute="trailing" id="edq-PS-D2Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qRI-be-IPa" secondAttribute="trailing" constant="-20" id="hZW-9T-g6v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hRh-GN-pcK" secondAttribute="trailing" id="qRK-mP-ib8"/>
                             <constraint firstItem="xUK-du-ky4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="rs0-0h-cUw"/>
                             <constraint firstItem="qRI-be-IPa" firstAttribute="top" secondItem="xUK-du-ky4" secondAttribute="bottom" constant="25" id="vt4-Pi-a4A"/>
+                            <constraint firstItem="P0l-5B-PNt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wrG-TU-sjz"/>
                             <constraint firstItem="hRh-GN-pcK" firstAttribute="top" secondItem="qRI-be-IPa" secondAttribute="bottom" constant="62" id="zqW-Bd-Q1U"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lapResetButton" destination="Bz1-A7-aQW" id="qCW-0X-xWB"/>
+                        <outlet property="lapTable" destination="P0l-5B-PNt" id="iQi-oj-X08"/>
                         <outlet property="timeLabel" destination="hRh-GN-pcK" id="ELe-iy-yaa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1282" y="711"/>
+            <point key="canvasLocation" x="647" y="490"/>
         </scene>
     </scenes>
 </document>
