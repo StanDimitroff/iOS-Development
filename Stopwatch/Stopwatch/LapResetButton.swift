@@ -12,7 +12,6 @@ class LapResetButton: RoundButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         layer.borderColor = UIColor.blackColor().CGColor
-        self.tintColor = UIColor.blackColor()
+        tintColor = UIColor.blackColor()
     }
-    
 }
