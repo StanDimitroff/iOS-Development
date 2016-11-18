@@ -18,6 +18,8 @@ __My app - Changelog__
   ([07db757b](https://github.com/StanDimitroff/iOS-Development/commit/07db757bdd314bd14f1124ff3aa3b42924545edf))
 - some fixes
   ([3da48e75](https://github.com/StanDimitroff/iOS-Development/commit/3da48e7551ade1b833dab35e6f9527112117885c))
+- **test.swift:** fixed file
+  ([2adf9ae1](https://github.com/StanDimitroff/iOS-Development/commit/2adf9ae18da11a4bfd274ea24f9ebd0d3da793d7))
 
 
 ## Test
