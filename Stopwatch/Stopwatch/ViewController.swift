@@ -46,6 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         timer.invalidate()
         self.state = .Stopped
         lapResetButton.setTitle("Reset", forState: .Normal)
+            print()
         }
     }
     
