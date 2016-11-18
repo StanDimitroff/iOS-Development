@@ -1,4 +1,4 @@
-__My nice application__
+__My app - Changelog__
 
 #   (2016-11-18)
 
@@ -6,12 +6,10 @@ __My nice application__
 
 ---
 
-## Features
+## Bug Fixes
 
-- new feat added
-  ([5cdbcc7b](https://github.com/StanDimitroff/iOS-Development/commit/5cdbcc7b389acecebc154b5aa84531a4f41808d8))
-- test feature
-  ([99faf69f](https://github.com/StanDimitroff/iOS-Development/commit/99faf69fd6d0df61f3dd742d2bdf63f6ef7a088e))
+- some fixes
+  ([3da48e75](https://github.com/StanDimitroff/iOS-Development/commit/3da48e7551ade1b833dab35e6f9527112117885c))
 
 
 
