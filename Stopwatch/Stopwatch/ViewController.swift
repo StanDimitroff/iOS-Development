@@ -48,7 +48,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         lapResetButton.setTitle("Reset", forState: .Normal)
             print()
 
-    
+            print(34)
+            print(45)
+        }
     }
     
     @IBAction func lapButtonPressed(sender: LapResetButton) {
