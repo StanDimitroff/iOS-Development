@@ -20,6 +20,12 @@ __My app - Changelog__
   ([3da48e75](https://github.com/StanDimitroff/iOS-Development/commit/3da48e7551ade1b833dab35e6f9527112117885c))
 
 
+## Test
+
+- test
+  ([86c26f79](https://github.com/StanDimitroff/iOS-Development/commit/86c26f79ecdf30cfff1ff7cfbbeff533252e978c))
+
+
 
 ---
 <sub><sup>*Generated with [git-changelog](https://github.com/rafinskipg/git-changelog). If you have any problems or suggestions, create an issue.* :) **Thanks** </sub></sup>
