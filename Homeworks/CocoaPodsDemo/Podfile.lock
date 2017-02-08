@@ -1,0 +1,18 @@
+PODS:
+  - ContactCircularView (1.1.0)
+  - NVActivityIndicatorView (3.2)
+  - SCLAlertView (0.7.0)
+
+DEPENDENCIES:
+  - ContactCircularView (~> 1.1.0)
+  - NVActivityIndicatorView
+  - SCLAlertView
+
+SPEC CHECKSUMS:
+  ContactCircularView: ede5d147fa8ecb9af157510dc54a89dd0f0d7295
+  NVActivityIndicatorView: 28942c18ced111a6a3ce5e6f5b27d9d40116d639
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+
+PODFILE CHECKSUM: 065ca76324ea918fe1d86fdadda0ed8c028391d4
+
+COCOAPODS: 1.2.0.beta.3
